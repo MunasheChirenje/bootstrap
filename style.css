@@ -548,4 +548,64 @@ label a {
   display: block;
   color: #2d3e50;
   text-decoration: none;
+}
+
+.top {
+  background: #ccc;
+  position: relative;
+  padding-top: 2.5em;
+}
+
+/* hamburger menu */
+.toggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  width: 30px;
+  height: 21px;
+  border: none;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  outline: 0;
+}
+
+.toggle:before,
+.toggle:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  top: 6px;
+  left: 0;
+  background: #fff;
+  position: absolute;
+}
+
+.toggle,
+.toggle:before,
+.toggle:after {
+  transition: all 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.open .toggle,
+.toggle:hover {
+  border-color: transparent;
+}
+
+.open .toggle:before,
+.toggle:hover:before {
+  transform: rotate(45deg);
+}
+
+.open .toggle:after,
+.toggle:hover:after {
+  transform: rotate(-45deg);
 }/*# sourceMappingURL=style.css.map */
