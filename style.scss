@@ -681,169 +681,162 @@ h2{
     
 
 
-    @media (min-width:993px) {
+    @media (min-width:577px) {
 
-        .menu{display: none;}
+        .nicky{display: none;}
         
     }
-    
-    *, *:before, *:after 
-    { box-sizing: border-box; }
-    
    
-    
-    label .menu {
-      position: absolute;
-      right: -100px;
-      top: -100px;
-      z-index: 100;
-      width: 200px;
-      height: 200px;
-      -webkit-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
-      box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
-      cursor: pointer;
       
-    }
-    
-    label .hamburger {
-      position: absolute;
-      top: 135px;
-      left: 50px;
-      width: 30px;
-      height: 2px;
-      background: white;
-      display: block;
-      -webkit-transform-origin: center;
-      transform-origin: center;
-      -webkit-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
-    }
-    
-    label .hamburger:after, label .hamburger:before {
-      -webkit-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
-      content: "";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: white;
-    }
-    
-    label .hamburger:before { top: -10px; }
-    
-    label .hamburger:after { bottom: -10px; }
-    
-    label input { display: none; }
-    
-    label input:checked + .menu {
-      box-shadow: 0 0 0 100vh  #1bbc9b, 0 0 0 70vh  #1bbc9b;
-      border-radius: 0;
-      width: 200px;
-      padding-left: 0px;
       
-    }
-    
-    label input:checked + .menu .hamburger {
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-      
-    }
-    
-    label input:checked + .menu .hamburger:after {
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg);
-      bottom: 0;
-      
-    }
-    
-    label input:checked + .menu .hamburger:before {
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg);
-      top: 0;
-      
-    }
-    
-    label input:checked + .menu + ul { opacity: 1; }
-    
-    label ul {
-      z-index: 200;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      -webkit-transition: .25s 0s ease-in-out;
-      transition: .25s 0s ease-in-out;
-    }
-    
-    label a {
-      margin-bottom: 1em;
-      display: block;
-      color: #2d3e50;
-      text-decoration: none;
-      
-    }
-    
+      @import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
 
+:root {
+  font-size:16px;
+}
 
+* {
+  box-sizing:border-box;
+  font-family:"Roboto","Helvetica","sans-serif";
+  color:#555;
+}
 
-    .top {
-        background: #ccc;
-        position: relative;
-        padding-top: 2.5em;
-      }
-      /* hamburger menu */
-      .toggle {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        background: transparent;
-        padding: 0;
-        margin: 0;
-        cursor: pointer;
-        outline: none;
-        width: 30px;
-        height: 21px;
-        border: none;
-        border-top: 3px solid #fff;
-        border-bottom: 3px solid #fff;
-        text-decoration: none;
-        color: #fff;
-        outline: 0;
-      }
-      .toggle:before,
-      .toggle:after {
-        content: "";
-        display: block;
-        width: 30px;
-        height: 3px;
-        top: 6px;
-        left: 0;
-        background: #fff;
-        position: absolute;
-      }
-      .toggle,
-      .toggle:before,
-      .toggle:after {
-        transition: all 0.3s ease;
-        transform: rotate(0deg);
-      }
-      .open .toggle,
-      .toggle:hover {
-        border-color: transparent;
-      }
-      .open .toggle:before,
-      .toggle:hover:before {
-        transform: rotate(45deg);
-      }
-      .open .toggle:after,
-      .toggle:hover:after {
-        transform: rotate(-45deg);
-      }
-      
-      
+$th_pink:#E84A5F;
+$th_dark:#2a363b;
+
+body {
+  margin:0;
+  padding:0;
+  background-color:darken($th_dark,10%);
+}
+
+main {
+  min-width:200px;
+  max-width:800px;
+  margin:80px auto;
+  padding:10px;
+  
+  .wrap {
+    padding:40px 20px;
+    background-color:#fff;
+    //box-shadow:0 0 10px 2px rgba(0,0,0,.2);
+  }
+  
+  .title {
+    font-size:2em;
+    text-align:center;
+    margin:20px auto 40px;
+    text-transform:uppercase;
+  }
+}
+
+header {  
+  nav {
+    background-color:rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    visibility:hidden;
+    transition:all 0.3s ease-in-out;
     
+    ul {
+      list-style-type:none;
+      padding:0;
+      margin:0;
+      position:absolute;
+      left:50%;
+      top:170px;
+      transition:all 0.3s ease-in-out;
+      transform:translateX(-50%);
+    
+      li {
+        transform:translateY(50px);
+        opacity:0;
+        
+        a {
+          display:block;
+          font-size:2em;
+          text-decoration:none;
+          padding:10px 0;
+          text-align:center;
+          color:#fff;
+          font-weight:bold;
+          transition:all 0.2s ease-in-out;
+          text-shadow:1px 1px 2px rgba(0,0,0,.5);
+          
+          &:hover {
+            color:$th_pink;
+          }
+        }
+      }
+    }
+  }
+}
+
+.toggle-btn {
+  display:block;
+  position:fixed;
+  z-index:10;
+  right:10px;
+  top:10px;
+  cursor:pointer;
+  
+  .bar {
+    width:30px;
+    height:2px;
+    margin:7px auto;
+    background-color:#fff;
+    transition:all 0.3s ease-in-out;
+    box-shadow:0 0 3px 1px rgba(0,0,0,.3);
+    
+    &:nth-child(2) {
+      width:20px;
+    }
+  }
+}
+
+#toggle:checked {
+  &~nav {
+    opacity:1;
+    visibility:visible;
+
+    ul {
+      top:70px;
+      
+      li {
+        transform:translateY(0px);
+        opacity:1;
+
+        @for $i from 1 through 4 {
+            $t: $i * 0.1;
+            &:nth-child(#{$i}) {
+              transition:all 0.3s cubic-bezier(.6,0,.8,1.5) #{$t}s; 
+            }
+          }
+      }
+    }
+  }
+  
+  &+label.toggle-btn {
+    .bar {
+      background-color:red;
+
+      &:nth-child(2) {
+        transform:translateX(50px);
+        opacity:0;
+      }
+
+      &:nth-child(1) {
+        transform:translateY(10px) rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        transform:translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
   
