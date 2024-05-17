@@ -698,7 +698,7 @@ h2{
 * {
   box-sizing:border-box;
   font-family:"Roboto","Helvetica","sans-serif";
-  color:#555;
+//   color:#555;
 }
 
 $th_pink:#E84A5F;
@@ -707,7 +707,7 @@ $th_dark:#2a363b;
 body {
   margin:0;
   padding:0;
-  background-color:darken($th_dark,10%);
+//   background-color:darken($th_dark,10%);
 }
 
 main {
@@ -839,4 +839,5 @@ header {
     }
   }
 }
+
   
