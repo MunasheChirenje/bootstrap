@@ -300,10 +300,10 @@ a:hover{
     height: 15vh;
   }
   .banner .line1 {
-    margin-top: 256px;
+    margin-top: 250px;
   }
   .banner .line2 {
-    margin-bottom: -256px;
+    margin-bottom: -250px;
   }
   .banner .oot {
     margin-left: 29px;
@@ -355,7 +355,7 @@ a:hover{
     margin-right: 0px;
   }
   .contact .form-control {
-    width: 1000%;
+    width: 330px;
     margin-left: -112px;
   }
   .contact h2 {
@@ -364,7 +364,7 @@ a:hover{
     margin-left: -59px;
   }
   .contact .message {
-    width: 970%;
+    width: 330px;
     margin-left: -99px;
   }
   .contact .send {
